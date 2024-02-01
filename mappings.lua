@@ -21,6 +21,9 @@ return {
     },
     ["<leader>b"] = { name = "Buffers" },
 
+    -- File mappings
+    ["<leader>fs"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
+
     -- Test mappings
     ["<leader>tn"] = {
       desc = "Test nearest",
