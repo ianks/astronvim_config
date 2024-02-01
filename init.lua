@@ -17,8 +17,7 @@ return {
     },
   },
 
-  -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -33,10 +32,14 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "go",
+          "rust",
+          "ruby",
+          "json",
+          "lua",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
+          "c",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers

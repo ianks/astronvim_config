@@ -5,10 +5,23 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.colorscheme.catppuccin" },
+  {
+    "catppuccin",
+    opts = {
+      flavour = "frappe",
+      term_colors = true,
+      integrations = {
+        markdown = true,
+        neotest = true,
+        cmp = true,
+      },
+    },
+  },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.pack.nix" },
+  -- { import = "astrocommunity.pack.nix" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.just" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.git.git-blame-nvim" },
+  { import = "astrocommunity.completion.copilot-lua" },
 }
