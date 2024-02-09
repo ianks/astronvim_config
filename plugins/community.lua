@@ -19,7 +19,7 @@ return {
   },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- { import = "astrocommunity.pack.nix" },
-  { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.just" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.git.git-blame-nvim" },

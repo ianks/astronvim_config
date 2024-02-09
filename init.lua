@@ -55,6 +55,33 @@ return {
     servers = {
       -- "pyright"
     },
+    -- analyzerTargetDir = "target/nvim-rust-analyzer",
+    --   lsp = {
+    config = {
+      rust_analyzer = function(opts)
+        local fd = require("lspconfig.util").root_pattern("rust-toolchain.toml", "Cargo.lock", "Cargo.toml")
+        opts.root_dir = function(fname)
+          local found = fd(fname)
+          return found
+        end
+        return opts
+      end,
+      -- rust_analyzer = {
+      --   settings = {
+      --     ["rust-analyzer"] = {
+      --       cargo = {
+      --         extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
+      --         extraArgs = { "--profile", "rust-analyzer" },
+      --       },
+      --       checkOnSave = {
+      --         allFeatures = true,
+      --         command = "clippy",
+      --         extraArgs = { "--no-deps" },
+      --       },
+      --     },
+      --   },
+      -- },
+    },
   },
 
   -- Configure require("lazy").setup() options
