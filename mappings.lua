@@ -44,8 +44,11 @@ return {
 
     -- Terminal mappings
     ["<leader>tt"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" }, -- also use <F7>
+    ["<C-`>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" }, -- also use <F7>
+    ["<M-`>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" }, -- also use <F7>
   },
   t = {
-    ["<F12>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<M-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
   },
 }
